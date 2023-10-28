@@ -9,9 +9,14 @@ import { PagesComponent } from './pages/pages.component';
 const routes: Routes = [
  
   {path: 'dashboard', component:DashboardComponent},
-  {path: 'products', component:ProductsComponent},
+  {path: 'products', 
+  loadChildren: () => import('./products/products.module').then(m => m.ProductsModule)},
+
   {path: 'statistics', component:StatisticsComponent},
-  {path: 'coupons', component:CouponsComponent},
+  
+  {path: 'coupons', 
+    loadChildren: () => import('./coupons/coupons.module').then(m=>m.CouponsModule)},
+  
   {path: 'pages', component:PagesComponent},
   {path: 'settings', component:DashboardComponent}
 ];

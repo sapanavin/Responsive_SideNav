@@ -13,6 +13,9 @@ import { CouponsComponent } from './coupons/coupons.component';
 import { PagesComponent } from './pages/pages.component';
 import { MediaComponent } from './media/media.component';
 import { SettingsComponent } from './settings/settings.component';
+import { SublevelMenuComponent } from './sublevel-menu.component';
+import { CouponsModule } from './coupons/coupons.module';
+import { ProductsModule } from './products/products.module';
 
 @NgModule({
   declarations: [
@@ -20,17 +23,18 @@ import { SettingsComponent } from './settings/settings.component';
     BodyComponent,
     SidenavComponent,
     DashboardComponent,
-    ProductsComponent,
     StatisticsComponent,
-    CouponsComponent,
     PagesComponent,
     MediaComponent,
-    SettingsComponent
+    SettingsComponent,
+    SublevelMenuComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    CouponsModule,
+    ProductsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
