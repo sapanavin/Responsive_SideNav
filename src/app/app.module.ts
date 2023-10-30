@@ -16,7 +16,9 @@ import { SettingsComponent } from './settings/settings.component';
 import { SublevelMenuComponent } from './sublevel-menu.component';
 import { CouponsModule } from './coupons/coupons.module';
 import { ProductsModule } from './products/products.module';
-
+import { HeaderComponent } from './header/header.component';
+import { OverlayModule } from '@angular/cdk/overlay';
+import { CdkMenuModule } from '@angular/cdk/menu';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,14 +29,17 @@ import { ProductsModule } from './products/products.module';
     PagesComponent,
     MediaComponent,
     SettingsComponent,
-    SublevelMenuComponent
+    SublevelMenuComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
+    OverlayModule,
     CouponsModule,
-    ProductsModule
+    ProductsModule,
+    CdkMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -39,27 +39,26 @@ export class SidenavComponent implements OnInit{
 
 
     @HostListener('window:resize', ['$event'])
-    onResize(event:any){
+      onResize(event:any){
       this.screenWidth = window.innerWidth;
       if(this.screenWidth <= 768) {
         //console.log("from sidenav.ts" , window.innerWidth);
         this.collapsed = false;
         this.onToggleSidenNav.emit({collapsed:this.collapsed, screenWidth: this.screenWidth});
-  
       }
     }
-  constructor(public router: Router){
-    
-  }
+    constructor(public router: Router){
+      
+    }
   
-    ngOnInit(): void {
-    this.screenWidth = window.innerWidth;
-  }
+      ngOnInit(): void {
+      this.screenWidth = window.innerWidth;
+    }
 
-  toggleCollapse(): void{
-    this.collapsed = !this.collapsed;
-    this.onToggleSidenNav.emit({collapsed:this.collapsed, screenWidth: this.screenWidth});
-  }
+    toggleCollapse(): void{
+      this.collapsed = !this.collapsed;
+      this.onToggleSidenNav.emit({collapsed:this.collapsed, screenWidth: this.screenWidth});
+    }
 
 closeSidenav():void{
   this.collapsed = false;

@@ -1,6 +1,6 @@
 h2{
     color:#495057;
-    
+    color:yellow;
 }
 
 .row{
@@ -47,23 +47,10 @@ h2{
         height: 45px;
         border-radius: 15px;
         margin-right:  15px;
-        border:1px solid black;
        
-        
-    }
-    .taskdiv{
-        width:100%;
-        height:20%;
-        background-color:white;
-    }
-    .completed {
-        background-color:greenyellow
-    }
-    .active{
-        background-color:orange;
-    }
-    .new{
-        background-color:blueviolet;
+        &.completed {
+            background:238, 139,9;
+        }
     }
 
 
@@ -93,16 +80,18 @@ h2{
         border-bottom: 1px solid #edf1f7;
         font-size: 1rem;
         font-weight: 600;
-        justify-content: space-between;
     }
 
     .card-body {
         padding: 1rem 1.5rem; 
-        justify-content: space-between;
     }
 }
 
 
+.col-right{
+    flex: 0 0 auto;
+    width: 41.66666667%;
+}
 
 
 
@@ -116,61 +105,56 @@ h2{
 
 
 .welcome-card{
-    border-radius:0.25rem;
-    /* max-width:740px; */
+    border-raduis:0.25rem;
+    max-width:740px;
 
 }
 
-.col-left-inside{
-    flex: 0 0 auto;
-    width: 58.33333333%;
-}
-.col-right-inside{
-    flex: 0 0 auto;
-    width: 40.66666667%; 
-}
-
-    p {
-        font-size: 14px;
-        margin-top: 7px;
-        font-weight:  normal;
-    }
 
 
 
-.dd{
-   
-}
+
+
+
+
 
 
 
     .welcome-head-container{
-        background-color: #34d8eb;
+        background-color: #55ee640;
         color:#556ee6;
         font-size:16px;
         display: flex;
-        flex-wrap:wrap;
+        flex:wrap:wrap;
         border-top-right-radius: 5px;
         border-top-left-radius: 5px;
 
-       
-            
+        .col-left{
+            flex: 0 0 auto;
+            width: 58.33333333%;
+
+            p {
+                font-size: 14px;
+                margin-top: 7px;
+                font-weight:  normal;
+            }
         }
 
         .col-right{
-            
-        
+            flex: 0 0 auto;
+            width: 41.66666667%;
+
             img{
                 width:65%;
                 height:auto;
             }
-        
         }
+    
 
         .welcome-body-container {
             display: flex;
             flex-wrap: wrap;
-        }
+
             .col-left {
                 flex: 0 0 auto;
                 width:33.33333333%;
@@ -180,16 +164,16 @@ h2{
                 margin-bottom: 1.5rem;
                 height: 4.5rem;
                 width:  4.5rem;
-            }
+
                 img{
                     border-radius: 50%;
                     padding:0.23rem;
                     background-color: #f8f8fb;
                     border:1px solid #f6f6f6;
-                    max-width:100%;
+                max-width:100%;
                     height: auto;
                 }
-            
+            }
 
             .name{
                 font-size: 16px;
@@ -201,13 +185,13 @@ h2{
                 color: #74788d;
                 font-size: 14px;
             }
-        
-
-    
-        .performance-container{
-            width:65%;
-
         }
+
+    .col-right{
+        flex: 0 0 auto;
+        width: 66.66666667%;
+
+        .performance-container{
 
             .performance{
                 display: flex;
@@ -221,25 +205,20 @@ h2{
            .progress{
             display:flex;
             height: 7px;
-            width:100%;
             overflow: hidden;
             font-size: .75rem;
             background-color: #e9ecef;
             border-radius: 0.25rem;
-            border: 1px solid;
-            margin-bottom: 10px;;
-                 
+
+           
+        
              } 
-             .progress-bar{
-                background-color: green;
-                width:75%;
-             }
-          
+          }
+       }
     
         .view-profile {
             margin-top: 1 rem;
-            width: 25%;
-        } 
+            
             button {
                 cursor: pointer;
                 border: none;
@@ -247,11 +226,19 @@ h2{
                 color: #fff;
                 background-color: #556ee6;
                 padding: 12px 17px;
-                border-radius:  10px;
-                width: 100%;
-            }
+                border-radius:  .5px;
+
                 .fa-arrow-right {
                     margin-left:  10px;
                 }
-       
-   
+            }
+         }
+         }
+    /*}
+}
+    
+    
+    
+    
+    
+    } */
